@@ -1,7 +1,11 @@
+cat > vercel.json <<EOF
 {
     "version": 2,
-    "nodes": [
-        { "src": "api/index.php", "use": "@vercel/php" }
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "@vercel/php"
+        }
     ],
     "routes": [
         {
@@ -27,3 +31,4 @@
         "SESSION_DRIVER": "cookie"
     }
 }
+EOF
